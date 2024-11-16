@@ -29,7 +29,7 @@ The assembly-language code is translated into binary representation and addresse
 A *lexical analyzer*, or *lexer* for short, will as its input take a string of individual letters and divide this string into tokens. Additionally, it will filter out whatever separates the tokens (the so-called *white-space*), i.e., lay-out characters (spaces, newlines etc.) and comments.
 ##### Regular Expressions
 $[0-9][0-9]^+$  is a regular expression which denotes any positive number.
-$[a-zA-Z-_-][a-zA-Z-_-0-9]^∗$ a variable name consists of letters, digits and the underscore symbol and it must begin with a letter or underscore.
+$[a-zA-Z][a-zA-Z0-9]^∗$ a variable name consists of letters, digits and the underscore symbol and it must begin with a letter or underscore.
 
 ## Syntax Analysis
 
