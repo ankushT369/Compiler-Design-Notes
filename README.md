@@ -4,7 +4,7 @@
 A compiler translates (or compiles) a program written in a high-level programming language that is suitable for human programmers into the low-level machine language that is required by computers.
 #### The phases of a compiler
 ##### Lexical analysis 
-This is the initial part of reading and analysing the program text:
+This is the initial part of reading and analyzing the program text:
 The text is read and divided into tokens, each of which corresponds to a symbol in the programming language, e.g., a variable name, keyword or number.
 ##### Syntax analysis 
 This phase takes the list of tokens produced by the lexical analysis
@@ -22,9 +22,16 @@ The intermediate language is translated to assembly language (a textual represen
 ##### Assembly and linking 
 The assembly-language code is translated into binary representation and addresses of variables, functions, etc., are determined.
 
-
-*The first three phases are collectively called the front-end of the compiler and the last three phases are collectively called the back-end. The middle part of the compiler is in this context only the intermediate code generation, but this often includes various optimisations and transformations on the intermediate code.*
+*The first three phases are collectively called the front-end of the compiler and the last three phases are collectively called the back-end. The middle part of the compiler is in this context only the intermediate code generation, but this often includes various optimizations and transformations on the intermediate code.*
 
 ## Lexical Analysis
 #### Definition
-A *lexical analyser*, or *lexer* for short, will as its input take a string of individual letters and divide this string into tokens. Additionally, it will filter out whatever separates the tokens (the so-called *white-space*), i.e., lay-out characters (spaces, newlines etc.) and comments.
+A *lexical analyzer*, or *lexer* for short, will as its input take a string of individual letters and divide this string into tokens. Additionally, it will filter out whatever separates the tokens (the so-called *white-space*), i.e., lay-out characters (spaces, newlines etc.) and comments.
+##### Regular Expressions
+$[0-9][0-9]^+$  is a regular expression which denotes any positive number.
+$[a-zA-Z-_-][a-zA-Z-_-0-9]^∗$ a variable name consists of letters, digits and the underscore symbol and it must begin with a letter or underscore.
+
+## Syntax Analysis
+
+#### Definition
+In *Syntax analyzer* , the recombination of these tokens happens into *syntax tree*. 
