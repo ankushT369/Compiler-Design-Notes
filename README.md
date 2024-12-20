@@ -1,3 +1,4 @@
+# Compiler-Design-Notes
 ## Basics
 #### Definition 
 A compiler translates (or compiles) a program written in a high-level programming language that is suitable for human programmers into the low-level machine language that is required by computers.
