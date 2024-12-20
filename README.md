@@ -1,4 +1,3 @@
-# Compiler Design
 ## Basics
 #### Definition 
 A compiler translates (or compiles) a program written in a high-level programming language that is suitable for human programmers into the low-level machine language that is required by computers.
@@ -27,11 +26,26 @@ The assembly-language code is translated into binary representation and addresse
 ## Lexical Analysis
 #### Definition
 A *lexical analyzer*, or *lexer* for short, will as its input take a string of individual letters and divide this string into tokens. Additionally, it will filter out whatever separates the tokens (the so-called *white-space*), i.e., lay-out characters (spaces, newlines etc.) and comments.
+#### Tokens
+A *Tokens* is the classification (or type) of a lexeme. It’s like a label that describes the role or category of the lexeme.
+**Example**: Using the same statement x = 5 + 3;, the tokens might be:
+- IDENTIFIER (for x)
+- ASSIGNMENT_OPERATOR (for =)
+- NUMBER (for 5 and 3)
+- OPERATOR (for +)
+- SEMICOLON (for ;)
+#### Lexemes
+A *lexemes* is the smallest sequence of characters in the source code that forms a meaningful unit.
+**Example**: In the statement x = 5 + 3;, the lexemes are:
+- x
+- =
+- 5
+- +
+- 3
 ##### Regular Expressions
 $[0-9][0-9]^+$  is a regular expression which denotes any positive number.
-$[a-zA-Z][a-zA-Z0-9]^∗$ a variable name consists of letters, digits and the underscore symbol and it must begin with a letter or underscore.
+$[a-zA-Z-_-][a-zA-Z-_-0-9]^∗$ a variable name consists of letters, digits and the underscore symbol and it must begin with a letter or underscore.
 
 ## Syntax Analysis
-
 #### Definition
-In *Syntax analyzer* , the recombination of these tokens happens into *syntax tree*. 
+In *Syntax analyzer* , the recombination of these tokens happens into *syntax tree*, this phase is also known as *Parsing Phase*. 
